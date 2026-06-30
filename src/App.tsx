@@ -173,7 +173,7 @@ export default function App() {
             <div className="w-8 h-8 rounded-xl bg-linear-to-tr from-accent to-accent-hover flex items-center justify-center shadow-sm">
               <span className="font-display font-bold text-white text-sm">T</span>
             </div>
-            <span className="font-display font-bold text-heading text-lg tracking-tight">tanvi.dev</span>
+            <span className="font-display font-bold text-heading text-lg tracking-tight">tanvi.io</span>
           </button>
 
           {/* Desktop Nav Links */}
