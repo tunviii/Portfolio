@@ -367,10 +367,9 @@ export default function App() {
   {/* Profile Image */}
   <div className="relative w-100 h-100 rounded-[28px] overflow-hidden border border-border shadow-premium bg-white">
     <img
-      src="src\public\profile.jpg"
-      alt="Tanvi"
-      className="w-full h-full object-cover"
-    />
+  src={new URL("../public/profile.jpg", import.meta.url).href}
+  alt="Tanvi"
+/>
   </div>
 </motion.div>
         </section>
