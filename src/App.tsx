@@ -309,7 +309,6 @@ export default function App() {
                 href={`${import.meta.env.BASE_URL}U_Tanvi_Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
-                download="U_Tanvi_Resume.pdf"
                 className="px-8 py-3.5 bg-white hover:bg-highlight-bg active:scale-[0.98] border border-border text-heading rounded-2xl text-sm font-semibold tracking-wide transition-all shadow-sm flex items-center gap-2 font-display"
                 id="btn-hero-resume"
               >
