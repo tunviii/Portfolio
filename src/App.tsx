@@ -305,14 +305,17 @@ export default function App() {
                 <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
               
-              <button
-                onClick={() => setIsResumeOpen(true)}
+              <a
+                href={`${import.meta.env.BASE_URL}U_Tanvi_Resume.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="U_Tanvi_Resume.pdf"
                 className="px-8 py-3.5 bg-white hover:bg-highlight-bg active:scale-[0.98] border border-border text-heading rounded-2xl text-sm font-semibold tracking-wide transition-all shadow-sm flex items-center gap-2 font-display"
                 id="btn-hero-resume"
               >
                 <FileText className="w-4 h-4 text-accent" />
                 <span>View Resume</span>
-              </button>
+              </a>
             </div>
 
             {/* Social icons */}
@@ -367,7 +370,7 @@ export default function App() {
   {/* Profile Image */}
   <div className="relative w-100 h-100 rounded-[28px] overflow-hidden border border-border shadow-premium bg-white">
     <img
-  src={new URL("../public/profile.jpg", import.meta.url).href}
+  src={`${import.meta.env.BASE_URL}profile.jpg`}
   alt="Tanvi"
 />
   </div>

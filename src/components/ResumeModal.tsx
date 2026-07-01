@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { X, Mail, Github, Linkedin, Calendar, GraduationCap, Code2, Award, Download, Printer } from "lucide-react";
+import { X, Mail, Github, Linkedin, Calendar, GraduationCap, Code2, Award, Download } from "lucide-react";
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -7,11 +7,6 @@ interface ResumeModalProps {
 }
 
 export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
-  // Simple print action
-  const handlePrint = () => {
-    window.print();
-  };
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -40,15 +35,6 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               </div>
               
               <div className="flex items-center gap-3">
-                <button 
-                  onClick={handlePrint}
-                  className="p-2 text-secondary-text hover:text-accent hover:bg-highlight-bg rounded-xl transition-all duration-200 flex items-center gap-1.5 text-xs font-medium font-display"
-                  title="Print Resume"
-                  id="btn-print-resume"
-                >
-                  <Printer className="w-4 h-4" />
-                  <span className="hidden sm:inline">Print / Save PDF</span>
-                </button>
                 <button
                   onClick={onClose}
                   className="p-2 text-secondary-text hover:text-heading hover:bg-highlight-bg rounded-xl transition-all duration-200"
@@ -62,7 +48,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
             {/* Resume paper content (Scrollable) */}
             <div className="flex-1 overflow-y-auto p-6 md:p-10 bg-white" id="resume-document-content">
-              <div className="max-w-3xl mx-auto flex flex-col gap-8 print:gap-6 text-heading">
+              <div id="resume-printable" className="max-w-3xl mx-auto flex flex-col gap-8 print:gap-6 text-heading">
                 
                 {/* Heading / Contact info */}
                 <div className="border-b border-border/40 pb-6 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center sm:items-end gap-4">
